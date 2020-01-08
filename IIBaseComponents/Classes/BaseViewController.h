@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 Elliot. All rights reserved.
 //
 
-//  基础封装主页面  
+//  基础封装主页面
 
 #import <UIKit/UIKit.h>
 
@@ -18,25 +18,27 @@
 @property (strong, nonatomic) UIButton *navRightButton;
 
 ///导航栏标题
--(void)addNavTitle:(NSString *)navTitle;
+- (void)addNavTitle:(NSString *)navTitle;
 ///新导航栏标题-UI3.0-导航栏侧边标题
--(void)addNewNavSideTitle:(NSString *)title;
+- (void)addNewNavSideTitle:(NSString *)title;
 
 ///导航栏标题View
--(void)changeNaviTitleView:(UIButton *)btn;
+- (void)changeNaviTitleView:(UIButton *)btn;
 ///新导航栏标题-UI3.0-导航栏侧边标题View
--(void)changeNewNaviSideTitleView:(UIButton *)btn;
+- (void)changeNewNaviSideTitleView:(UIButton *)btn;
 
 ///设置导航栏左侧按钮
--(void)addNavLeftButtonNormalImage:(UIImage *)normalImage navLeftButtonSelectedImage:(UIImage *)selectedImage;
+- (void)addNavLeftButtonNormalImage:(UIImage *)normalImage navLeftButtonSelectedImage:(UIImage *)selectedImage;
 ///设置导航栏右侧按钮
--(void)addNavRightButtonNormalImage:(UIImage *)normalImage navRightButtonSelectedImage:(UIImage *)selectedImage;
+- (void)addNavRightButtonNormalImage:(UIImage *)normalImage navRightButtonSelectedImage:(UIImage *)selectedImage;
 ///导航栏右侧按钮 自定义点击事件
 - (void)addNavRightButtonWithImage:(UIImage *)normalImage action:(SEL)action;
 ///导航栏右侧有两个按钮 分别设置显示的按钮图片
 - (void)addTwoNavRightButtonWithRightImage:(UIImage *)rightImage leftImage:(UIImage *)leftImage;
 ///导航栏右侧按钮名称
--(void)addNavRightButtonTitle:(NSString *)title;
+- (void)addNavRightButtonTitle:(NSString *)title;
+///导航栏左侧按钮名称 自定义点击事件
+- (void)addNavLeftButtonTitle:(NSString *)title action:(SEL)action;
 
 ///导航栏左侧按钮点击事件
 - (void)rectBack;
@@ -48,7 +50,7 @@
 - (void)rightNavButtonClickLeft:(UIButton *)btn;
 
 ///导航栏返回按钮点击事件
--(IBAction)backButtonClicked:(id)sender;
+- (IBAction)backButtonClicked:(id)sender;
 
 ///初始化导航栏字体格式
 - (void)initNavTitleAttributes;

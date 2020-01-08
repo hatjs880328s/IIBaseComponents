@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+
     [self initNavTitleAttributes];
 
     self.navigationController.navigationBar.translucent = YES;
@@ -150,13 +150,26 @@
     navRightButton.selected = NO;
     [navRightButton setTitleColor:APPUIConfig.navRightTextColor forState:UIControlStateNormal];
     navRightButton.titleLabel.font = [UIFont systemFontOfSize:17];
-    
+
     [navRightButton addTarget:self action:@selector(rightNavButtonClick:) forControlEvents:UIControlEventTouchUpInside];
      self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:navRightButton];
 }
 
+- (void)addNavLeftButtonTitle:(NSString *)title action:(SEL)action{
+    navLeftButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [navLeftButton setFrame:CGRectMake(0, 0, 60, 30)];
+    [navLeftButton setImageEdgeInsets:UIEdgeInsetsMake(0, -10, 0, 0)];
+    [navLeftButton setTitle:title forState:UIControlStateNormal];
+    [navLeftButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];//左对齐
+    navLeftButton.selected = NO;
+    [navLeftButton setTitleColor:APPUIConfig.navRightTextColor forState:UIControlStateNormal];
+    navLeftButton.titleLabel.font = [UIFont systemFontOfSize:17];//字号
+    [navLeftButton addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.navLeftButton];
+}
+
 - (void)rightNavButtonClick:(UIButton *)btn {
-    
+
 }
 
 ///导航栏右侧两个按钮 右侧按钮点击事件
