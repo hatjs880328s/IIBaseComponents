@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'IIBaseComponents'
   s.version          = '0.1.3'
-  s.summary          = '根VC 根VM 根V'
+  s.summary          = '根VC 根VM 根V.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
